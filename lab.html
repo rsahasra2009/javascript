@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function checkPrime() {
+            var num = Number(document.getElementById("num").value);
+            if (num <= 1) {
+                document.getElementById("result").innerHTML = num + " is NOT Prime";
+                return;
+            }
+            var isPrime = true;
+            for (var i = 2; i <= num / 2; i++) {
+                if (num % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                document.getElementById("result").innerHTML = num + " is Prime";
+            } else {
+                document.getElementById("result").innerHTML = num + " is NOT Prime";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Q11. Check Prime Number</h3>
+    <label>Enter a number:</label>
+    <input type="number" id="num"><br><br>
+    <button onclick="checkPrime()">Check</button>
+    <p id="result"></p>
+</body>
+</html>
