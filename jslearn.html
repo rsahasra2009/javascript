@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS for Beginners — Learn JavaScript Data Types</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="nav-brand">
+      <span class="logo">JS</span>
+      <span>Learn JavaScript</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#basics">Basics</a>
+      <a href="#datatypes">Data Types</a>
+      <a href="#playground">Playground</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Learn JavaScript the <span class="highlight">easy</span> way</h1>
+      <p>
+        A friendly, beginner-focused guide. You already know HTML &amp; CSS —
+        now let's make your pages come alive with JavaScript.
+      </p>
+      <a href="#datatypes" class="btn">Start with Data Types →</a>
+    </div>
+    <div class="hero-card">
+      <pre><code>let name = "Beginner";
+let year = 2026;
+let learning = true;
+
+console.log("Hello, " + name + "!");</code></pre>
+    </div>
+  </section>
+
+  <!-- ===== What is JavaScript ===== -->
+  <section id="basics" class="section">
+    <h2>What is JavaScript? 🤔</h2>
+    <p class="lead">
+      HTML is the <strong>structure</strong>, CSS is the <strong>style</strong>,
+      and JavaScript is the <strong>behavior</strong>. It makes websites
+      interactive — think buttons that respond, forms that validate, and
+      content that updates without reloading.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <h3>🏗️ HTML</h3>
+        <p>Builds the skeleton of the page — headings, buttons, images.</p>
+      </div>
+      <div class="card">
+        <h3>🎨 CSS</h3>
+        <p>Adds colors, layout, and makes everything look nice.</p>
+      </div>
+      <div class="card">
+        <h3>⚡ JavaScript</h3>
+        <p>Brings the page to life so it can react to the user.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Data Types ===== -->
+  <section id="datatypes" class="section alt">
+    <h2>JavaScript Data Types 📦</h2>
+    <p class="lead">
+      A <strong>data type</strong> tells JavaScript what kind of value you're
+      storing in a variable. Here are the ones you'll use most often.
+    </p>
+
+    <div class="datatype-grid">
+      <article class="dt-card">
+        <h3>1. String 🔤</h3>
+        <p>Text wrapped in quotes.</p>
+        <pre><code>let city = "Mumbai";
+let greeting = 'Hello!';</code></pre>
+      </article>
+
+      <article class="dt-card">
+        <h3>2. Number 🔢</h3>
+        <p>Any number — whole or decimal.</p>
+        <pre><code>let age = 21;
+let price = 99.50;</code></pre>
+      </article>
+
+      <article class="dt-card">
+        <h3>3. Boolean ✅</h3>
+        <p>Only <code>true</code> or <code>false</code>.</p>
+        <pre><code>let isOnline = true;
+let isPaid = false;</code></pre>
+      </article>
+
+      <article class="dt-card">
+        <h3>4. Undefined ❓</h3>
+        <p>A variable declared but not given a value.</p>
+        <pre><code>let score;
+console.log(score); // undefined</code></pre>
+      </article>
+
+      <article class="dt-card">
+        <h3>5. Null 🚫</h3>
+        <p>An intentional "empty" or "nothing" value.</p>
+        <pre><code>let selected = null;</code></pre>
+      </article>
+
+      <article class="dt-card">
+        <h3>6. Object 🗂️</h3>
+        <p>A collection of related key–value pairs.</p>
+        <pre><code>let user = {
+  name: "Aisha",
+  age: 20
+};</code></pre>
+      </article>
+
+      <article class="dt-card">
+        <h3>7. Array 📚</h3>
+        <p>An ordered list of values.</p>
+        <pre><code>let fruits = ["apple", "mango", "kiwi"];</code></pre>
+      </article>
+
+      <article class="dt-card">
+        <h3>8. Symbol / BigInt ✨</h3>
+        <p>Advanced types you'll meet later on.</p>
+        <pre><code>let big = 9007199254740991n;</code></pre>
+      </article>
+    </div>
+
+    <div class="tip">
+      💡 <strong>Tip:</strong> Use <code>typeof value</code> to check the data
+      type of anything in JavaScript. Try it in the playground below!
+    </div>
+  </section>
+
+  <!-- ===== Playground ===== -->
+  <section id="playground" class="section">
+    <h2>Try it yourself: <code>typeof</code> Playground 🧪</h2>
+    <p class="lead">
+      Type any value below and click the button to see what data type
+      JavaScript thinks it is.
+    </p>
+
+    <div class="playground">
+      <input
+        id="valueInput"
+        type="text"
+        placeholder='e.g. 42, "hello", true, null'
+      />
+      <button id="checkBtn" class="btn">Check Type</button>
+      <p id="result" class="result"></p>
+    </div>
+  </section>
+
+  <!-- ===== Quiz ===== -->
+  <section id="quiz" class="section alt">
+    <h2>Quick Quiz 🎯</h2>
+    <p class="lead">Test what you just learned!</p>
+
+    <div class="quiz">
+      <p class="question">
+        What is the data type of <code>"2026"</code> (with quotes)?
+      </p>
+      <div class="options">
+        <button class="option" data-correct="false">Number</button>
+        <button class="option" data-correct="true">String</button>
+        <button class="option" data-correct="false">Boolean</button>
+      </div>
+      <p id="quizFeedback" class="result"></p>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>Made with ❤️ for JavaScript beginners · Keep learning, keep coding!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
