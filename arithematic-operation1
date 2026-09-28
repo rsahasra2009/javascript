@@ -21,7 +21,7 @@ function maths() {
 <input type = "button" value="enter" Onclick= "maths()">
 
 <p id="result"></p>
-
+<p> hii </p>
 
 </body>
 </html>
